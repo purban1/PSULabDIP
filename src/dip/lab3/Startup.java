@@ -19,8 +19,8 @@ public class Startup {
          * suppose to access.
          */
 
-        IInputMessageStrategy inputMessage = new ConsoleInputStrategy();
-        IOutputMessageStrategy outputMessage = new GuiOutputStrategy();
+        IInputMessageStrategy inputMessage = new GuiInputStrategy();
+        IOutputMessageStrategy outputMessage = new ConsoleOutputStrategy();
 
         
         MessageService service = new MessageService(inputMessage, outputMessage);
