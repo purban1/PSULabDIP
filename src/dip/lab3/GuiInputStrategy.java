@@ -1,21 +1,21 @@
-
 package dip.lab3;
 
 import javax.swing.JOptionPane;
 
 /**
  * This class gets a message from a input dialog box.
- * @author Patrick Urban
- * Version 1.0
+ *
+ * @author Patrick Urban Version 1.0
  */
-public class GuiInputStrategy implements IInputMessageStrategy {
-    
-//    private String input;
-    
-    public String getMessage() {
+public class GuiInputStrategy implements IMessageInputStrategy {
 
-        return JOptionPane.showInputDialog(null, "What is your message?");
+    private String input;
+
+    public Message getMessage() {
+        input = JOptionPane.showInputDialog(null, "What is your message?");
+
+        Message message = new Message(input);
+        return message;
 
     }
 }
-

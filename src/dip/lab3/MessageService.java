@@ -9,12 +9,12 @@ package dip.lab3;
  */
 public class MessageService {
     
-    private IInputMessageStrategy input;
-    private IOutputMessageStrategy output;
+    private IMessageInputStrategy input;
+    private IMessageOutputStrategy output;
 
     
-    public MessageService(IInputMessageStrategy input, 
-            IOutputMessageStrategy output){
+    public MessageService(IMessageInputStrategy input, 
+            IMessageOutputStrategy output){
         this.input = input;
         this.output = output;
     }

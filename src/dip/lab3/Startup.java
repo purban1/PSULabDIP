@@ -21,12 +21,15 @@ public class Startup {
          * way the  service knows the specific input and output types the  
          * service is suppose to access.
          */
+        
+        // Pick an input Strategy
+//        IMessageInputStrategy inputMessage = new GuiInputStrategy();
+//        IMessageInputStrategy inputMessage = new DefaultMessageInputStrategy();
+        IMessageInputStrategy inputMessage = new RandomMessageInputStrategy();
 
-//        IInputMessageStrategy inputMessage = new GuiInputStrategy();
-//        IInputMessageStrategy inputMessage = new DefaultMessageInputStrategy();
-        IInputMessageStrategy inputMessage = new RandomMessageInputStrategy();
-//        IOutputMessageStrategy outputMessage = new GuiOutputStrategy();
-        IOutputMessageStrategy outputMessage = new ConsoleOutputStrategy();
+        // Pick an Output Strategy
+        IMessageOutputStrategy outputMessage = new GuiOutputStrategy();
+//        IMessageOutputStrategy outputMessage = new ConsoleOutputStrategy();
 
         
         MessageService service = 

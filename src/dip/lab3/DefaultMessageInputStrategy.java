@@ -6,12 +6,13 @@ package dip.lab3;
  * @author Patrick Urban
  * Version 1.0
  */
-public class DefaultMessageInputStrategy implements IInputMessageStrategy {
+public class DefaultMessageInputStrategy implements IMessageInputStrategy {
 
-    private String message = "Advanced Java is extremely interesting.";
+    private final String MSG = "Advanced Java is extremely interesting.";
     
     
-    public final String getMessage() {
+    public final Message getMessage() {
+        Message message = new Message(MSG);
         return message;
     }
 
