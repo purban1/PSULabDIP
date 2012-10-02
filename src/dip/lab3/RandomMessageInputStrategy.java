@@ -19,8 +19,8 @@ public class RandomMessageInputStrategy implements IInputMessageStrategy {
     
     
     public final String getMessage() {
-        Random r = new Random(System.nanoTime());
-        int randomResult = r.nextInt(message.length);
+        Random rand = new Random(System.nanoTime());
+        int randomResult = rand.nextInt(message.length);
         return message[randomResult];
     }
 
