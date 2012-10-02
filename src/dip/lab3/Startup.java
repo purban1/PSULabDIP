@@ -16,13 +16,16 @@ public class Startup {
         /**
          * First create the Strategy Objects that the Service will use. 
          * StrategyType variable = specific strategy
-         * Next, create the Service and tell the service what kind of input and output
-         * strategies the messageService object will be receiving. This way the
-         * the service knows the specific input and output types the service is 
-         * suppose to access.
+         * Next, create the Service and tell the service what kind of input and 
+         * output strategies the messageService object will be receiving. This 
+         * way the  service knows the specific input and output types the  
+         * service is suppose to access.
          */
 
-        IInputMessageStrategy inputMessage = new GuiInputStrategy();
+//        IInputMessageStrategy inputMessage = new GuiInputStrategy();
+//        IInputMessageStrategy inputMessage = new DefaultMessageInputStrategy();
+        IInputMessageStrategy inputMessage = new RandomMessageInputStrategy();
+//        IOutputMessageStrategy outputMessage = new GuiOutputStrategy();
         IOutputMessageStrategy outputMessage = new ConsoleOutputStrategy();
 
         

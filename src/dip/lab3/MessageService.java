@@ -20,11 +20,11 @@ public class MessageService {
     }
 
     /**
-     * @param output the output to display.
+     * send the input object to the output
      */
     public final void produceTheMessage() {
         // validate the output before sending out
-        this.output.setMessage(input.getMessage());
+        this.output.setMessage(input);
     }
 
     

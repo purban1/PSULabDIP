@@ -5,5 +5,5 @@ package dip.lab3;
  * @author Patrick Urban
  */
 public interface IOutputMessageStrategy {
-    public abstract void setMessage(String message);
+    public abstract void setMessage(IInputMessageStrategy message);
 }
