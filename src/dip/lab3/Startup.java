@@ -8,6 +8,9 @@ public class Startup {
 
     public static void main(String[] args) {
 
+        /**
+         * input will be used to store the input text and send to output
+         */
         String input;
 
         /**
@@ -23,10 +26,14 @@ public class Startup {
         IOutputMessageStrategy outputMessage = new ConsoleOutputStrategy();
 
         
-        MessageService service = new MessageService(inputMessage, outputMessage);
+        MessageService service = 
+                new MessageService(inputMessage, outputMessage);
 
-        input = service.getInput();
-        service.setOutput(input);
+        /**
+         * Gets input and sends directly to an output object
+         */
+        service.produceTheMessage();
+        
 
     }
 }

@@ -30,6 +30,13 @@ public class TipService {
         return ts.getTip();
     }
 
+    /**
+     * @param tipCalculationStrategy the tipCalculationStrategy to set
+     */
+    public void setTipCalculationStrategy(ITipCalculationStrategy tipCalculationStrategy) {
+        this.tipCalculationStrategy = tipCalculationStrategy;
+    }
+
     
     
 }

@@ -32,8 +32,9 @@ public class Startup {
         // High-level module
         HRService hr = new HRService();
 
-        // High-level module for output (borrowed from lab 3 after I got it working)
-        // Testing both output types at once.
+        /** High-level module for output (borrowed from lab 3 after 
+         * I got it working). I'm Testing both output types at once.
+        */ 
         MessageService ms1 = new MessageService(io1);
         MessageService ms2 = new MessageService(io2);
 

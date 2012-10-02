@@ -17,12 +17,11 @@ public class FoodServiceTipCalculatorStrategy implements ITipCalculationStrategy
     private static final double POOR_RATE = 0.10;
 
     private double bill;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
-    private ServiceQuality serviceQuality;
+    
+    private ITipCalculationStrategy.ServiceQuality serviceQuality;
 
-    public FoodServiceTipCalculatorStrategy(ServiceQuality q, double billAmt) {
+    public FoodServiceTipCalculatorStrategy
+            (ITipCalculationStrategy.ServiceQuality q, double billAmt) {
         this.setServiceRating(q);
         this.setBill(billAmt);
     }

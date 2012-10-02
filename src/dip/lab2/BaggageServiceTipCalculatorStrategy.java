@@ -20,12 +20,11 @@ public class BaggageServiceTipCalculatorStrategy implements ITipCalculationStrat
 
     private double baseTipPerBag;
     private int bagCount;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
-    private ServiceQuality serviceQuality;
+    
+    private ITipCalculationStrategy.ServiceQuality serviceQuality;
 
-    public BaggageServiceTipCalculatorStrategy(ServiceQuality q, int bags) {
+    public BaggageServiceTipCalculatorStrategy
+            (ITipCalculationStrategy.ServiceQuality q, int bags) {
         this.setServiceRating(q); // perform validation
         this.setBagCount(bags);
 

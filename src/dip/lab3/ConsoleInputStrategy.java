@@ -15,27 +15,10 @@ public class ConsoleInputStrategy implements IInputMessageStrategy {
     Scanner keyboard = new Scanner(System.in);
     
     public String getMessage() {
-        String input;
         System.out.println("What is your message?");
-        input = keyboard.nextLine();
+        this.input = keyboard.nextLine();
 //        setInput(input);
         return input;
     }
-
-//    /**
-//     * @return the input
-//     */
-//    public final String getInput() {
-//        return input;
-//    }
-//
-//    /**
-//     * @param input the input to set
-//     */
-//    private final void setInput(String input) {
-//        // validate the input from the Console
-//        this.input = input;
-//    }
-
 
 }

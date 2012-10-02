@@ -25,11 +25,13 @@ public class Startup {
  
     public static void main(String[] args) {
         
-        BaggageServiceTipCalculatorStrategy service1 =
+        //Luskov substitution prinicpal - USE Abstraction as the type
+        ITipCalculationStrategy service1 =
                 new BaggageServiceTipCalculatorStrategy(
                 BaggageServiceTipCalculatorStrategy.ServiceQuality.FAIR,5);
         
-        FoodServiceTipCalculatorStrategy service2 = 
+        //Luskov substitution prinicpal - USE Abstraction as the type
+        ITipCalculationStrategy service2 = 
                 new FoodServiceTipCalculatorStrategy(
                 FoodServiceTipCalculatorStrategy.ServiceQuality.GOOD,220.50);
         
